@@ -1,0 +1,41 @@
+package:
+  name: cfitsio
+  version: "{{version}}"
+
+source:
+  fn: cfitsio3390.tar.gz
+  url: http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio3390.tar.gz
+  md5: e92dd2a4282a1c50d46167041a29fc67
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+# requirements:
+#   build:
+#     - python
+
+#   run:
+#     - python
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libcfitsio.a  # [not win]
+    - test -f ${PREFIX}/lib/libcfitsio.so  # [linux]
+    - test -f ${PREFIX}/lib/libcfitsio.dylib  # [osx]
+    # - conda inspect linkages -n _test cfitsio  # [linux]
+
+
+#   # requires:
+#     # Put any additional test requirements here.  For example
+#     # - nose
+
+about:
+  home: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
+  license: custom
+  license_file: License.txt
+  summary: 'Library of ANSI C routines for reading and writing FITS format data files.'

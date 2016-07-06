@@ -25,3 +25,6 @@
   version: '0.9.8'
   numpy_compiled_extensions: true
   python: '>2.6|>=3.4'
+
+- name: cfitsio
+  version: '3.390'
