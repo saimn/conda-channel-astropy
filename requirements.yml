@@ -29,7 +29,7 @@
 - name: mpdaf
   version: '2.0'
   numpy_compiled_extensions: true
-  python: '>2.6|>=3.5'
+  python: '>=2.7|>=3.5'
 
 - name: cfitsio
   version: '3.390'
