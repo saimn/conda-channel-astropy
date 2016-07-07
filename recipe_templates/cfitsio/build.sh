@@ -4,7 +4,7 @@
  # >  make          (or  'make shared')
  # >  make install  (this step is optional)
 
-./configure --prefix=$PREFIX
+./configure --enable-reentrant --prefix=$PREFIX
 make shared
 make install
 
